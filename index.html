@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulário de filmes</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div id="form-center">
+    <h1>Formulário de Filmes</h1>
+    <div id="posicao-lado">
+      <div id="caixa-box">
+        <div id="margin-dentro">
+          <h2>Adicionar Filmes</h2>
+          <label for="titulo">Título: </label><br>
+          <input type="text" id="titulo" size="15">
+          <br><br>
+          <label for="diretor">Diretor: </label>
+          <input type="text" id="diretor" size="15">
+          <br><br>
+          <label for="minutos">minutos: </label>
+          <input type="text" id="minutos" size="15">
+          <br>
+          <p>Status: <span id="status-enviado"></span></p>
+          <button id="button-space" onclick="enviar()">Enviar</button>
+        </div>
+      </div>
+      <div id="caixa-box">
+        <div id="margin-dentro">
+          <h2>Verificar Filmes na lista</h2>
+          <label for="numero">Número:</label><br>
+          <input type="text" size="5" id="numero">
+          <br><br>
+          <p>Status: <span id="status-busca"></span></p>
+          <p><b>Título: </b><span id="mostraTitulo"></span></p>
+          <p><b>Diretor: </b><span id="mostraDiretor"></span></p>
+          <p><b>Minutos: </b><span id="mostraMinutos"></span></p>
+          <button id="button-space" onclick="verLista()">Buscar</button>
+        </div>
+      </div>
+      <div id="caixa-box">
+        <div id="margin-dentro">
+          <h2>Deletar Filmes na lista</h2>
+          <label for="numero-del">Número:</label><br>
+          <input type="text" size="5" id="numero-del">
+          <br><br>
+          <p>Status: <span id="status-delet"></span></p>
+          <span id="mostraTitulo"></span><br><span id="mostraDiretor"></span><br><span id="mostraMinutos"></span>
+          <button id="button-space" onclick="deletFilm()">Excluir</button>
+        </div>
+      </div>
+      <div id="caixa-box">
+        <div id="margin-dentro">
+          <h2>Editar Filmes na lista</h2>
+          <label for="numero-edit">Número:</label><br>
+          <input type="text" id="numeroEdita" size="15"><br>
+          <label for="titulo-edit">Título: </label><br>
+          <input type="text" id="tituloEdita" size="15"><br>
+          <label for="diretor-edit">Diretor: </label><br>
+          <input type="text" id="diretorEdita" size="15"><br>
+          <label for="minutos-edit">minutos: </label><br>
+          <input type="text" id="minutosEdita" size="15"><br>
+          <p>Status: <span id="status-editado"></span></p>
+          <br><br>
+          <span id="mostraTitulo"></span><br><span id="mostraDiretor"></span><br><span id="mostraMinutos"></span>
+          <button id="button-space" onclick="edit()">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="jquery-3.6.0.min.js" defer></script>
+<script src="index.js" defer></script>
+
+</html>
